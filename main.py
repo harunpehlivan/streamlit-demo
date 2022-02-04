@@ -48,7 +48,7 @@ st.write('Shape of dataset:', X.shape)
 st.write('number of classes:', len(np.unique(y)))
 
 def add_parameter_ui(clf_name):
-    params = dict()
+    params = {}
     if clf_name == 'SVM':
         C = st.sidebar.slider('C', 0.01, 10.0)
         params['C'] = C
@@ -86,7 +86,7 @@ y_pred = clf.predict(X_test)
 acc = accuracy_score(y_test, y_pred)
 
 st.write(f'Classifier = {classifier_name}')
-st.write(f'Accuracy =', acc)
+st.write('Accuracy =', acc)
 
 #### PLOT DATASET ####
 # Project the data onto the 2 primary principal components
